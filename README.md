@@ -1,38 +1,81 @@
-# UnsplashDownloader
+# unsplash-downloader
 
-TODO: Gem description
+Unsplash-downloader downloads all featured photos from https://unsplash.com. First time it will download all photos to `unsplash` dir, and then if there will be new photos on Unsplash and you use download command it will download only new photos to `unsplash` dir.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'unsplash_downloader'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install this gem by executing:
 
     $ gem install unsplash_downloader
 
 ## Usage
 
-TODO: Write usage instructions here
+####Downloading photos
 
-## Development
+To download photos go to a dir where you want to save them and execute:
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    $ unsplash_downloader download
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+It will download all photos to `current/dir/unsplash`
+
+If you want, you can save photos to relative path:
+
+    $ unsplash_downloader download PATH
+    
+Use `--verbose` flag to see download progress in console.
+If you use `--all` flag it won't download not only new photos, but all photos with overwritting old.
+
+####Counting photos
+
+To count all Unsplash photos execute:
+
+    $ unsplash_downloader count_all
+    
+To count new photos on Unsplash that you don't have in your unsplash dir execute:
+
+    $ unsplash_downloader count_new
+
+Optionally enter a relative path to unsplash folder.
+
+####Getting urls
+
+To get photos urls execute:
+
+    $ unsplash_downloader get_urls
+
+It will print urls in a console.
+
+If you want to save urls to file execute:
+
+    $ unsplash_downloader get_urls >> example.txt
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/unsplash_downloader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/xennon/unsplash_downloader.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+```
+The MIT License (MIT)
+
+Copyright (c) 2015 Bartłomiej Jacak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+```
