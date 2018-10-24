@@ -1,3 +1,7 @@
+# OUTDATED GEM
+
+--- 
+
 # unsplash-downloader
 
 Unsplash-downloader downloads all featured photos from https://unsplash.com. First time it will download all photos to `unsplash` dir, and then if there will be new photos on Unsplash and you use download command it will download only new photos to `unsplash` dir.
@@ -10,7 +14,7 @@ Install this gem by executing:
 
 ## Usage
 
-####Downloading photos
+#### Downloading photos
 
 To download photos go to a dir where you want to save them and execute:
 
@@ -25,7 +29,7 @@ If you want, you can save photos to relative path:
 Use `--verbose` flag to see download progress in console.
 If you use `--all` flag it won't download not only new photos, but all photos with overwritting old.
 
-####Counting photos
+#### Counting photos
 
 To count all Unsplash photos execute:
 
@@ -37,7 +41,7 @@ To count new photos on Unsplash that you don't have in your unsplash dir execute
 
 Optionally enter a relative path to unsplash folder.
 
-####Getting urls
+#### Getting urls
 
 To get photos urls execute:
 
